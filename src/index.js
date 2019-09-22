@@ -1,5 +1,5 @@
 var fileReader = (file) => {
-    return require('./' + file + '.json').sort((a, b) => {
+    return require('./../' + file + '.json').sort((a, b) => {
         if (a.start === b.start) {
             return a.end - b.end
         } else {
@@ -9,7 +9,6 @@ var fileReader = (file) => {
 }
 
 var createOrder = (trips) => {
-    // console.log(trips)
     let journey = []
     let visited = new Array(trips.length).fill(false)
     for (let i =0; i < trips.length; i++) {
